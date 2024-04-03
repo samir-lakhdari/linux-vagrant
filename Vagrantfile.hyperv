@@ -7,9 +7,9 @@ VM_HOSTNAME = "centos"
 
 Vagrant.configure("2") do |config|
   config.vm.define "centos" do |centos|
-    docker.vm.box = BOX_BASE
-    docker.vm.hostname = VM_HOSTNAME
-    docker.vm.provider PROVIDER do |vm|
+    centos.vm.box = BOX_BASE
+    centos.vm.hostname = VM_HOSTNAME
+    centos.vm.provider PROVIDER do |vm|
       vm.memory = VM_RAM
       vm.cpus = VM_CPU
     end
